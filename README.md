@@ -24,13 +24,13 @@ Tecnologies used in the project (including cloud platform)
 1.  Build and Run python app container
     1.  Build insided the folder [src](./src/) with the command:
         ```bash
-        docker build . -t python-ocr
+        docker build . -t python-1
         ```
     1.  Run the Container App:
         *   For interactive terminal session with the host local files (for modification and test in real team, not need re-build) run
 
             ```bash
-            $ docker run -it --rm --name=python-c1 -network ocr-receipt-dev --ip 10.0.0.2 -p 8000:8000 -v $(pwd):"/home/realtime" python-ocr bash
+            $ docker run -it --rm --name=python-c1 -network $network_name --ip 10.0.0.2 -p 8000:8000 -v $(pwd):"/home/realtime" python-1 bash
             ```
 
             or
@@ -39,11 +39,11 @@ Tecnologies used in the project (including cloud platform)
             $ docker run -it \
                 --rm \
                 --name python-c1 \
-                --network ocr-receipt-dev \
+                --network $network_name \
                 --ip 10.0.0.2 \
                 -p 8000:8000 \
                 -v $(pwd):"/home/realtime" \
-                python-ocr bash
+                python-1 bash
             ```
             For run the application inside the terminal run:
 
@@ -54,7 +54,7 @@ Tecnologies used in the project (including cloud platform)
         *   For non interactive run
 
             ```bash
-            docker run --rm -d --name=python-c1 -p 8000:8000 python-ocr
+            docker run --rm -d --name=python-c1 -p 8000:8000 python-1
             ```
 
         flags:

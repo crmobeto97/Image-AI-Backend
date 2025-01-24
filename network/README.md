@@ -20,6 +20,12 @@ base on:
 
 #### Review
 
+export name like variable environment
+
+```bash
+export network_name="image-ia"
+```
+
 list docker networks
 
 ```bash
@@ -29,11 +35,11 @@ docker network ls
 get ocr-receipt-dev network details
 
 ```bash
-docker network inspect ocr-receipt-dev
+docker network inspect $network_name
 ```
 
 #### Delete Network
 
 ```bash
-docker network rm ocr-receipt-dev
+docker network rm $network_name
 ```
