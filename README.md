@@ -30,7 +30,7 @@ Tecnologies used in the project (including cloud platform)
         *   For interactive terminal session with the host local files (for modification and test in real team, not need re-build) run
 
             ```bash
-            $ docker run -it --rm --name=python-c1 -network $network_name --ip 10.0.0.2 -p 8000:8000 -v $(pwd):"/home/realtime" python-1 bash
+            $ docker run -it --rm --name=python-c1 --network $network_name --ip 10.0.0.3 -p 8000:8000 -v $(pwd):"/home/realtime" python-1 bash
             ```
 
             or
@@ -40,7 +40,7 @@ Tecnologies used in the project (including cloud platform)
                 --rm \
                 --name python-c1 \
                 --network $network_name \
-                --ip 10.0.0.2 \
+                --ip 10.0.0.3 \
                 -p 8000:8000 \
                 -v $(pwd):"/home/realtime" \
                 python-1 bash
@@ -70,3 +70,4 @@ Tecnologies used in the project (including cloud platform)
 
 <!-- Bibliografy -->
 [1]: https://example          "example documentation"
+[2]: https://pjreddie.com/darknet/yolo/ "YOLO: Real-Time Object Detection"
