@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-
+from contextlib import asynccontextmanager
+from starlette.responses import RedirectResponse
 
 
 app = FastAPI(
@@ -13,7 +14,7 @@ app = FastAPI(
     Github Repo: https://github.com/couchbase-examples/python-quickstart-fastapi/tree/main/
 
     """,
-    lifespan=lifespan,
+    #lifespan=lifespan,
 )
 
 
