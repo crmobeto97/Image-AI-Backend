@@ -165,3 +165,7 @@ cython_debug/
 /src/pdf/*
 temp/*
 temp/
+
+# model
+ia_model/*
+ia_model

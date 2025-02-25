@@ -25,17 +25,16 @@ RUN pip3 install -r requirements.txt
 
 ## Copy code
 COPY ./app ./app
-WORKDIR /home/app
-
-## for realtime test local changes files
-RUN mkdir /home/realtime
 
 ## Copy Yolo IA Model 
+RUN mkdir ia_model
+WORKDIR /home/ia_model
 RUN git clone https://github.com/pjreddie/darknet
-WORKDIR /home/app/darknet
+WORKDIR /home/ia_model/darknet
 RUN make
 RUN wget https://pjreddie.com/media/files/yolov3.weights
-   
+WORKDIR /home
+
 
 EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
