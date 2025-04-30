@@ -30,11 +30,11 @@ Tecnologies used in the project (including cloud platform)
         *   For interactive terminal session with the host local files (for modification and test in real team, not need re-build) run
             Linux
             ```bash
-            $ docker run -it --rm --name=python-c1 --network $network_name --ip 10.0.0.3 -p 8000:8000 -v $(pwd):"/home/realtime" python-1 bash
+            $ docker run -it --rm --name=backend --network $network_name --ip 10.0.0.3 -p 8000:8000 -v $(pwd):"/home/realtime" python-1 bash
             ```
             PowerShell
             ```bash
-            $ docker run -it --rm --name=python-c1 --network "image-ia" --ip "10.0.0.3" -p 8000:8000 -v ${PWD}:"/home/realtime" python-1 bash
+            $ docker run -it --rm --name=backend --network "image-ia" --ip "10.0.0.3" -p 8000:8000 -v ${PWD}:"/home/realtime" python-1 bash
             ```
 
             or
@@ -42,7 +42,7 @@ Tecnologies used in the project (including cloud platform)
             ```bash
             $ docker run -it \
                 --rm \
-                --name python-c1 \
+                --name backend \
                 --network $network_name \
                 --ip 10.0.0.3 \
                 -p 8000:8000 \
@@ -58,7 +58,7 @@ Tecnologies used in the project (including cloud platform)
         *   For non interactive run
 
             ```bash
-            docker run --rm -d --name=python-c1 -p 8000:8000 python-1
+            docker run --rm -d --name=backend -p 8000:8000 python-1
             ```
 
         flags:
