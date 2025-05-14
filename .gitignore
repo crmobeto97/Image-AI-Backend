@@ -166,6 +166,8 @@ cython_debug/
 temp/*
 temp/
 
-# model
-ia_model/*
-ia_model
+# model darknet
+ia_model/darknet/*
+ia_model/darknet
+src/ia_model/darknet
+src/ia_model/darknet/*
