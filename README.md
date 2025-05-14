@@ -21,6 +21,11 @@ Tecnologies used in the project (including cloud platform)
     1.  Enter in  [network](./network/)
     1.  Run script [create_docker_network.sh](./network/create_docker_network.sh) 
 
+    if you creatred before only run in your terminal
+
+    1. network_name="image-ia"
+
+
 1.  Build and Run python app container
     1.  Build insided the folder [src](./src/) with the command:
         ```bash

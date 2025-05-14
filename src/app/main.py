@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from starlette.responses import RedirectResponse
-from app.routes import images, model
+from app.routes import images, model, detect
 #from app.routes.darknet import model
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -30,6 +30,7 @@ app.add_middleware(
 
 app.include_router(images.router, prefix="/images", tags=["images"])
 app.include_router(model.router, prefix="/model", tags=["model"])
+app.include_router(detect.router, prefix="/detect", tags=["detect"])
 
 # Redirect to Swagger documentation on loading the API for demo purposes
 @app.get("/", include_in_schema=False)

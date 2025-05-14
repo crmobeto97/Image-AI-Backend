@@ -19,10 +19,6 @@ def detect_objects(token: str = Form(...)):
             print("Temp directory not found.")
             return {"error": "Temp directory not found."}
         
-        
-        if not processed_path.exists():
-            processed_path.mkdir(parents=True, exist_ok=True)
-            print(f"Carpeta creada: {processed_path}")
 
         # Loop through images in the temp folder
         for image_path in folder_path.glob("*.jpg"):  # Adjust for other formats if needed
