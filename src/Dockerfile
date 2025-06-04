@@ -19,15 +19,13 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends python3-pip 
 
 RUN pip3 install --upgrade pip
 
-## Installing code depedencies
-COPY ./requirements.txt .
+## Copy code and Installing code depedencies
+COPY . .
+
 RUN pip3 install -r requirements.txt
 
-## Copy code
-COPY ./app ./app
-
 ## Copy Yolo IA Model 
-RUN mkdir ia_model
+# RUN mkdir ia_model
 WORKDIR /home/ia_model
 RUN git clone https://github.com/pjreddie/darknet
 WORKDIR /home/ia_model/darknet
